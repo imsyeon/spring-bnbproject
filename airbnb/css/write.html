@@ -1,0 +1,897 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://airbnb-clone-nomadcoders.s3.amazonaws.com/static/css/styles.css">
+    <title>
+    Create Room
+| Nbnb</title>
+  </head>
+  <body class="text-gray-800 mt-24 font-light">
+    
+    <header class="container max-w-full inset-0 flex items-center justify-between px-6 h-20 border-b border-gray-400 fixed bg-white">
+      <div class="flex items-center w-1/3">
+        <a href="/" class="mr-6">
+            <img class="w-8" src="https://airbnb-clone-nomadcoders.s3.amazonaws.com/static/img/logo.png" />
+        </a>
+      </div>
+      
+<ul class="flex items-center text-sm font-medium h-full">
+    
+        <li class="nav_link">
+            <a href="/users/switch-hosting/">
+                
+                    Stop hosting
+                
+            </a>
+        </li>
+        
+            <li class="nav_link"><a href="/rooms/create/">Create Room</a></li>
+        
+        <li class="nav_link"><a href="/lists/favs/">Favs ()</a></li>
+        <li class="nav_link"><a href="/users/799/">Profile</a></li>
+        <li class="nav_link"><a href="/users/logout/">로그아웃</a></li>
+    
+</ul>
+
+    </header>
+
+    
+     
+    <div class="container lg:w-5/12 md:w-1/2 xl:w-1/4 mx-auto my-10 flex flex-col items-center border p-6 border-gray-400">
+
+        <form method="POST" class="w-full" enctype="multipart/form-data">
+    <input type="hidden" name="csrfmiddlewaretoken" value="Y6Me7uzoKMnmQVkKzSIC4WAmC5g2vQspaAEP0MP8TS8fWVDAx1mliAOXjldAWjZh">
+    
+    
+    
+    
+        <div class="input w-full ">
+        Name
+        <input type="text" name="name" maxlength="140" required id="id_name" size="50">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Description
+        <textarea name="description" cols="40" rows="10" required id="id_description">
+</textarea>
+        
+    </div>
+    
+        <div class="input w-full ">
+        Country
+        <select name="country" required id="id_country">
+  <option value="" selected>---------</option>
+
+  <option value="AF">아프가니스탄</option>
+
+  <option value="AL">알바니아</option>
+
+  <option value="DZ">알제리</option>
+
+  <option value="AD">안도라</option>
+
+  <option value="AO">앙골라</option>
+
+  <option value="AI">앵귈라</option>
+
+  <option value="AQ">남극대륙</option>
+
+  <option value="AG">앤티가바부다</option>
+
+  <option value="AR">아르헨티나</option>
+
+  <option value="AM">아르메니아</option>
+
+  <option value="AW">아루바</option>
+
+  <option value="AU">오스트레일리아</option>
+
+  <option value="AT">오스트리아</option>
+
+  <option value="AZ">아제르바이잔</option>
+
+  <option value="BS">바하마</option>
+
+  <option value="BH">바레인</option>
+
+  <option value="BD">방글라데시</option>
+
+  <option value="BB">바베이도스</option>
+
+  <option value="BY">벨라루스</option>
+
+  <option value="BE">벨기에</option>
+
+  <option value="BZ">벨리즈</option>
+
+  <option value="BJ">베냉</option>
+
+  <option value="BM">버뮤다</option>
+
+  <option value="BT">부탄</option>
+
+  <option value="BO">볼리비아</option>
+
+  <option value="BQ">보나이러</option>
+
+  <option value="BW">보츠와나</option>
+
+  <option value="BR">브라질</option>
+
+  <option value="BN">브루나이</option>
+
+  <option value="BG">불가리아</option>
+
+  <option value="BF">부르키나파소</option>
+
+  <option value="BI">브룬디</option>
+
+  <option value="CV">카보베르데</option>
+
+  <option value="KH">캄보디아</option>
+
+  <option value="CM">카메룬</option>
+
+  <option value="CA">캐나다</option>
+
+  <option value="CF">중앙아프리카공화국</option>
+
+  <option value="TD">차드</option>
+
+  <option value="CL">칠레</option>
+
+  <option value="CN">중국</option>
+
+  <option value="CX">크리스마스제도</option>
+
+  <option value="CC">코코스섬</option>
+
+  <option value="CO">콜롬비아</option>
+
+  <option value="KM">코모로</option>
+
+  <option value="CD">콩고민주공화국</option>
+
+  <option value="CG">콩고</option>
+
+  <option value="CR">코스타리카</option>
+
+  <option value="CI">코트디부아르</option>
+
+  <option value="HR">크로아티아</option>
+
+  <option value="CU">쿠바</option>
+
+  <option value="CW">큐라소</option>
+
+  <option value="CY">키프로스</option>
+
+  <option value="CZ">체코</option>
+
+  <option value="DK">덴마크</option>
+
+  <option value="DJ">지부티</option>
+
+  <option value="DM">도미니카</option>
+
+  <option value="EC">에콰도르</option>
+
+  <option value="EG">이집트</option>
+
+  <option value="SV">엘살바도르</option>
+
+  <option value="ER">에리트레아</option>
+
+  <option value="EE">에스토니아</option>
+
+  <option value="SZ">스와질랜드</option>
+
+  <option value="ET">에티오피아</option>
+
+  <option value="FJ">피지</option>
+
+  <option value="FI">핀란드</option>
+
+  <option value="FR">프랑스</option>
+
+  <option value="GA">가봉</option>
+
+  <option value="GM">감비아</option>
+
+  <option value="GE">조지아</option>
+
+  <option value="DE">독일</option>
+
+  <option value="GH">가나</option>
+
+  <option value="GI">지브롤터</option>
+
+  <option value="GR">그리스</option>
+
+  <option value="GL">그린란드</option>
+
+  <option value="GD">그레나다</option>
+
+  <option value="GP">과달루페</option>
+
+  <option value="GU">괌</option>
+
+  <option value="GT">과테말라</option>
+
+  <option value="GG">건지</option>
+
+  <option value="GN">기니</option>
+
+  <option value="GW">기니비사우</option>
+
+  <option value="GY">가이아나</option>
+
+  <option value="HT">아이티</option>
+
+  <option value="VA">바티칸시국</option>
+
+  <option value="HN">온두라스</option>
+
+  <option value="HK">홍콩</option>
+
+  <option value="HU">헝가리</option>
+
+  <option value="IS">아이슬란드</option>
+
+  <option value="IN">인도</option>
+
+  <option value="ID">인도네시아</option>
+
+  <option value="IR">이란</option>
+
+  <option value="IQ">이라크</option>
+
+  <option value="IE">아일랜드</option>
+
+  <option value="IL">이스라엘</option>
+
+  <option value="IT">이탈리아</option>
+
+  <option value="JM">자메이카</option>
+
+  <option value="JP">일본</option>
+
+  <option value="JE">져지</option>
+
+  <option value="JO">요르단</option>
+
+  <option value="KZ">카자흐스탄</option>
+
+  <option value="KE">케냐</option>
+
+  <option value="KI">키리바시</option>
+
+  <option value="KP">조선민주주의인민공화국</option>
+
+  <option value="KR">대한민국</option>
+
+  <option value="KW">쿠웨이트</option>
+
+  <option value="KG">키르기스스탄</option>
+
+  <option value="LA">라오스</option>
+
+  <option value="LV">라트비아</option>
+
+  <option value="LB">레바논</option>
+
+  <option value="LS">레소토</option>
+
+  <option value="LR">라이베리아</option>
+
+  <option value="LY">리비아</option>
+
+  <option value="LI">리히텐슈타인</option>
+
+  <option value="LT">리투아니아</option>
+
+  <option value="LU">룩셈부르크</option>
+
+  <option value="MO">마카오</option>
+
+  <option value="MG">마다가스카르</option>
+
+  <option value="MW">말라위</option>
+
+  <option value="MY">말레이시아</option>
+
+  <option value="MV">몰디브</option>
+
+  <option value="ML">말리</option>
+
+  <option value="MT">몰타</option>
+
+  <option value="MH">마셜제도</option>
+
+  <option value="MQ">마르티니크</option>
+
+  <option value="MR">모리타니</option>
+
+  <option value="MU">모리셔스</option>
+
+  <option value="YT">마요트</option>
+
+  <option value="MX">멕시코</option>
+
+  <option value="FM">미크로네시아</option>
+
+  <option value="MD">몰도바</option>
+
+  <option value="MC">모나코</option>
+
+  <option value="MN">몽골리아</option>
+
+  <option value="ME">몬테네그로</option>
+
+  <option value="MS">몬트세렛</option>
+
+  <option value="MA">모로코</option>
+
+  <option value="MZ">모잠비크</option>
+
+  <option value="MM">미얀마</option>
+
+  <option value="NA">나미비아</option>
+
+  <option value="NR">나우루</option>
+
+  <option value="NP">네팔</option>
+
+  <option value="NL">네덜란드</option>
+
+  <option value="NC">뉴칼레도니아</option>
+
+  <option value="NZ">뉴질랜드</option>
+
+  <option value="NI">니카라과</option>
+
+  <option value="NE">니제르</option>
+
+  <option value="NG">나이지리아</option>
+
+  <option value="NU">니우에</option>
+
+  <option value="MK">마케도니아</option>
+
+  <option value="MP">북마리아나제도</option>
+
+  <option value="NO">노르웨이</option>
+
+  <option value="OM">오만</option>
+
+  <option value="PK">파키스탄</option>
+
+  <option value="PW">팔라우</option>
+
+  <option value="PS">팔레스타인</option>
+
+  <option value="PA">파나마</option>
+
+  <option value="PG">파푸아뉴기니</option>
+
+  <option value="PY">파라과이</option>
+
+  <option value="PE">페루</option>
+
+  <option value="PH">필리핀</option>
+
+  <option value="PN">핏케언</option>
+
+  <option value="PL">폴란드</option>
+
+  <option value="PT">포르투갈</option>
+
+  <option value="PR">푸에르토리코</option>
+
+  <option value="QA">카타르</option>
+
+  <option value="RE">레위니웅</option>
+
+  <option value="RO">로마니아</option>
+
+  <option value="RU">러시아</option>
+
+  <option value="RW">르완다</option>
+
+  <option value="BL">생바르텔레미</option>
+
+  <option value="SH">세인트헬레나</option>
+
+  <option value="KN">세인트키츠네비스</option>
+
+  <option value="LC">세인트루시아</option>
+
+  <option value="MF">세인트마틴</option>
+
+  <option value="PM">생피에르미클롱</option>
+
+  <option value="VC">세인트빈센트그레나딘</option>
+
+  <option value="WS">사모아</option>
+
+  <option value="SM">산마리노</option>
+
+  <option value="ST">상투메프린시페</option>
+
+  <option value="SA">사우디아라비아</option>
+
+  <option value="SN">세네갈</option>
+
+  <option value="RS">세르비아</option>
+
+  <option value="SC">시칠리</option>
+
+  <option value="SL">시에라리온</option>
+
+  <option value="SG">싱가포르</option>
+
+  <option value="SX">신트마르턴</option>
+
+  <option value="SK">슬로바키아</option>
+
+  <option value="SI">슬로베니아</option>
+
+  <option value="SB">솔로몬제도</option>
+
+  <option value="SO">소말리아</option>
+
+  <option value="ZA">남아프리카공화국</option>
+
+  <option value="SS">남수단</option>
+
+  <option value="ES">스페인</option>
+
+  <option value="LK">스리랑카</option>
+
+  <option value="SD">수단</option>
+
+  <option value="SR">수리남</option>
+
+  <option value="SE">스웨덴</option>
+
+  <option value="CH">스위스</option>
+
+  <option value="SY">시리아</option>
+
+  <option value="TW">대만</option>
+
+  <option value="TJ">타지키스탄</option>
+
+  <option value="TZ">탄자니아</option>
+
+  <option value="TH">타이</option>
+
+  <option value="TL">동티모르</option>
+
+  <option value="TG">토고</option>
+
+  <option value="TK">토켈라우제도</option>
+
+  <option value="TO">통가</option>
+
+  <option value="TT">트리니다드토바고</option>
+
+  <option value="TN">튀니지</option>
+
+  <option value="TR">터키</option>
+
+  <option value="TM">투르크메니스탄</option>
+
+  <option value="TV">투발루</option>
+
+  <option value="UG">우간다</option>
+
+  <option value="UA">우크라이나</option>
+
+  <option value="AE">아랍에미리트</option>
+
+  <option value="GB">영국</option>
+
+  <option value="US">미국</option>
+
+  <option value="UY">우루과이</option>
+
+  <option value="UZ">우즈베키스탄</option>
+
+  <option value="VU">바누아투</option>
+
+  <option value="VE">베네수엘라</option>
+
+  <option value="VN">베트남</option>
+
+  <option value="WF">월리스푸투나제도</option>
+
+  <option value="EH">서사하라</option>
+
+  <option value="YE">예멘</option>
+
+  <option value="ZM">잠비아</option>
+
+  <option value="ZW">짐바브웨</option>
+
+  <option value="AX">올란드 제도</option>
+
+  <option value="AS">아메리칸 사모아</option>
+
+  <option value="BA">보스니아 헤르체고비나</option>
+
+  <option value="BV">부베 섬</option>
+
+  <option value="CK">쿡 아일랜드</option>
+
+  <option value="DO">도미니카 공화국</option>
+
+  <option value="GQ">적도 기니</option>
+
+  <option value="FK">폴크랜드 섬</option>
+
+  <option value="FO">페로 제도</option>
+
+  <option value="GF">프랑스령 기아나</option>
+
+  <option value="PF">프랑스령 폴리네시아</option>
+
+  <option value="IM">맨 섬</option>
+
+  <option value="NF">노퍽 섬</option>
+
+  <option value="UM">미국령 군소제도</option>
+
+  <option value="IO">영국령 인도양 식민지</option>
+
+  <option value="TF">프랑스령 남부와 남극지역</option>
+
+  <option value="HM">허드 맥도날드 제도</option>
+
+  <option value="GS">사우스조지아 사우스샌드위치 제도</option>
+
+  <option value="SJ">스발바르 얀마옌 제도</option>
+
+  <option value="TC">터크스 케이커스 제도</option>
+
+  <option value="KY">케이맨 섬1</option>
+
+  <option value="VG">버진아일랜드(영국령)</option>
+
+  <option value="VI">버진아일랜드(미국령)</option>
+
+</select>
+        
+    </div>
+    
+        <div class="input w-full ">
+        City
+        <input type="text" name="city" maxlength="80" required id="id_city">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Price
+        <input type="number" name="price" required id="id_price">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Address
+        <input type="text" name="address" maxlength="140" required id="id_address">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Guests
+        <input type="number" name="guests" required id="id_guests">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Beds
+        <input type="number" name="beds" required id="id_beds">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Bedrooms
+        <input type="number" name="bedrooms" required id="id_bedrooms">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Baths
+        <input type="number" name="baths" required id="id_baths">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Check in
+        <input type="text" name="check_in" required id="id_check_in">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Check out
+        <input type="text" name="check_out" required id="id_check_out">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Instant book
+        <input type="checkbox" name="instant_book" id="id_instant_book">
+        
+    </div>
+    
+        <div class="input w-full ">
+        Room type
+        <select name="room_type" required id="id_room_type">
+  <option value="" selected>---------</option>
+
+  <option value="1">House</option>
+
+  <option value="2">Hotel</option>
+
+  <option value="3">Private Room</option>
+
+</select>
+        
+    </div>
+    
+        <div class="input w-full ">
+        Amenities
+        <select name="amenities" id="id_amenities" multiple>
+  <option value="1">Air conditioning</option>
+
+  <option value="2">Alarm Clock</option>
+
+  <option value="3">Balcony</option>
+
+  <option value="4">Bathroom</option>
+
+  <option value="5">Bathtub</option>
+
+  <option value="6">Bed Linen</option>
+
+  <option value="7">Boating</option>
+
+  <option value="8">Cable TV</option>
+
+  <option value="9">Carbon monoxide detectors</option>
+
+  <option value="10">Chairs</option>
+
+  <option value="11">Children Area</option>
+
+  <option value="12">Coffee Maker in Room</option>
+
+  <option value="13">Cooking hob</option>
+
+  <option value="14">Cookware &amp; Kitchen Utensils</option>
+
+  <option value="15">Dishwasher</option>
+
+  <option value="16">Double bed</option>
+
+  <option value="17">En suite bathroom</option>
+
+  <option value="18">Free Parking</option>
+
+  <option value="19">Free Wireless Internet</option>
+
+  <option value="20">Freezer</option>
+
+  <option value="21">Fridge / Freezer</option>
+
+  <option value="22">Golf</option>
+
+  <option value="23">Hair Dryer</option>
+
+  <option value="24">Heating</option>
+
+  <option value="25">Hot tub</option>
+
+  <option value="26">Indoor Pool</option>
+
+  <option value="27">Ironing Board</option>
+
+  <option value="28">Microwave</option>
+
+  <option value="29">Outdoor Pool</option>
+
+  <option value="30">Outdoor Tennis</option>
+
+  <option value="31">Oven</option>
+
+  <option value="32">Queen size bed</option>
+
+  <option value="33">Restaurant</option>
+
+  <option value="34">Shopping Mall</option>
+
+  <option value="35">Shower</option>
+
+  <option value="36">Smoke detectors</option>
+
+  <option value="37">Sofa</option>
+
+  <option value="38">Stereo</option>
+
+  <option value="39">Swimming pool</option>
+
+  <option value="40">Toilet</option>
+
+  <option value="41">Towels</option>
+
+  <option value="42">TV</option>
+
+  <option value="43">Air conditioning</option>
+
+  <option value="44">Alarm Clock</option>
+
+  <option value="45">Balcony</option>
+
+  <option value="46">Bathroom</option>
+
+  <option value="47">Bathtub</option>
+
+  <option value="48">Bed Linen</option>
+
+  <option value="49">Boating</option>
+
+  <option value="50">Cable TV</option>
+
+  <option value="51">Carbon monoxide detectors</option>
+
+  <option value="52">Chairs</option>
+
+  <option value="53">Children Area</option>
+
+  <option value="54">Coffee Maker in Room</option>
+
+  <option value="55">Cooking hob</option>
+
+  <option value="56">Cookware &amp; Kitchen Utensils</option>
+
+  <option value="57">Dishwasher</option>
+
+  <option value="58">Double bed</option>
+
+  <option value="59">En suite bathroom</option>
+
+  <option value="60">Free Parking</option>
+
+  <option value="61">Free Wireless Internet</option>
+
+  <option value="62">Freezer</option>
+
+  <option value="63">Fridge / Freezer</option>
+
+  <option value="64">Golf</option>
+
+  <option value="65">Hair Dryer</option>
+
+  <option value="66">Heating</option>
+
+  <option value="67">Hot tub</option>
+
+  <option value="68">Indoor Pool</option>
+
+  <option value="69">Ironing Board</option>
+
+  <option value="70">Microwave</option>
+
+  <option value="71">Outdoor Pool</option>
+
+  <option value="72">Outdoor Tennis</option>
+
+  <option value="73">Oven</option>
+
+  <option value="74">Queen size bed</option>
+
+  <option value="75">Restaurant</option>
+
+  <option value="76">Shopping Mall</option>
+
+  <option value="77">Shower</option>
+
+  <option value="78">Smoke detectors</option>
+
+  <option value="79">Sofa</option>
+
+  <option value="80">Stereo</option>
+
+  <option value="81">Swimming pool</option>
+
+  <option value="82">Toilet</option>
+
+  <option value="83">Towels</option>
+
+  <option value="84">TV</option>
+
+</select>
+        
+    </div>
+    
+        <div class="input w-full ">
+        Facilities
+        <select name="facilities" id="id_facilities" multiple>
+  <option value="1">Private entrance</option>
+
+  <option value="2">Paid parking on premises</option>
+
+  <option value="3">Paid parking off premises</option>
+
+  <option value="4">Elevator</option>
+
+  <option value="5">Parking</option>
+
+  <option value="6">Gym</option>
+
+  <option value="7">Private entrance</option>
+
+  <option value="8">Paid parking on premises</option>
+
+  <option value="9">Paid parking off premises</option>
+
+  <option value="10">Elevator</option>
+
+  <option value="11">Parking</option>
+
+  <option value="12">Gym</option>
+
+</select>
+        
+    </div>
+    
+        <div class="input w-full ">
+        House rules
+        <select name="house_rules" id="id_house_rules" multiple>
+</select>
+        
+    </div>
+    
+    
+    <button class="btn bg-red-500 text-white">Create room</button>
+</form>
+            
+    </div>
+
+    
+<footer class="container mx-auto text-center py-10 border-t font-medium text-gray-500">
+    <div class="flex flex-col">
+        <span>
+            Please don't copy us.
+        </span>
+        <span>&copy; 2019 Nomad Coders. All rights reserved.</span>
+    </div>
+    <div class="mt-10 flex">
+        
+        <select class="w-1/5 h-8" id="js-lang">
+            <option value="en"
+                
+            >English</option>
+            <option value="es"
+                
+            >Spanish</option>
+        </select>
+    </div>
+</footer>
+    <script>
+        const langSelect = document.getElementById("js-lang");
+        const handleLangChange = () => {
+            const selected = langSelect.value;
+            fetch(`/users/switch-language/?lang=${selected}`).then(() => window.location.reload());
+        }
+        langSelect.addEventListener("change", handleLangChange);
+    </script>
+  </body>
+</html>

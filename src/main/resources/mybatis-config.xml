@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+<!-- 필요하면 사용하는애 alias는 별명 -->
+	<typeAliases>
+		<typeAlias type="com.spring.web.vo.BoardVO" alias="board"/>
+		<typeAlias type="com.spring.web.vo.UserVO" alias="user"/>
+		<typeAlias type="com.spring.web.vo.CommentVO" alias="comment"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="sqlmapper/board-mapper.xml"/>
+		<mapper resource="sqlmapper/user-mapper.xml"/>
+		<mapper resource="sqlmapper/comment-mapper.xml"/>
+	</mappers>
+</configuration>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CommentDAO">
+
+	<select id="getComment" parameterType="com.spring.web.vo.CommentVO"
+		resultType="com.spring.web.vo.CommentVO">
+		select * from bnb_comment where comment_hId=#{comment_hId}
+	</select>
+
+	<select id="getCommentList" parameterType="comment"
+		resultType="comment">
+		select * from bnb_comment where board_idx=#{board_idx} order by board_idx desc
+	</select>
+
+	<insert id="insertComment">
+		insert into bnb_comment(comment_hId, comment_name, comment_content,board_idx)
+		values((select COALESCE(max(comment_hId),0)+1 from bnb_comment a),#{comment_name},#{comment_content},#{board_idx})
+	</insert>
+
+	<update id="updateComment">
+		update bnb_comment set comment_content=#{comment_content} where comment_hId=#{comment_hId}
+	</update>
+
+	<delete id="deleteComment">
+		delete from bnb_comment where comment_hId=#{comment_hId}
+	</delete>
+	<select id="listAll" resultType="comment">
+	SELECT top(5) * FROM  bnb_comment where comment_hId=#{comment_hId} not in
+	(SELECT TOP (3) comment_hId FROM bnb_comment bc2 order by comment_hId DESC)
+	order by comment_hId DESC
+	</select>
+</mapper>

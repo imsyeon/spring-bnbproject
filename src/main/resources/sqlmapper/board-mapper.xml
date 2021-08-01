@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+	<select id="getBoard" parameterType="com.spring.web.vo.BoardVO"
+		resultType="com.spring.web.vo.BoardVO">
+		select * from bnb_board where board_idx=#{board_idx}
+	</select>
+
+	<select id="getBoardList" parameterType="board"
+		resultType="board">
+		select * from(SELECT ROW_NUMBER() over(ORDER by board_idx DESC) as
+		ROW_NUM,
+		* FROM bnb_board
+		) as a
+		where 1=1
+		<if test="searchType == 'TITLE'">
+			AND board_title like '%${searchKeyword}%'
+		</if>
+		<if test="searchType == 'CONTENT'">
+			AND board_content like '%${searchKeyword}%'
+		</if>
+		 AND a.ROW_NUM BETWEEN #{startList} AND #{endPageList}
+	</select>
+
+	<update id="getBoardCount" parameterType="int">
+		update bnb_board set
+		cnt = cnt + 1 where board_idx=#{board_idx}
+	</update>
+
+	<select id="boardCount" resultType="int">
+		select count(board_idx) from bnb_board
+		where 1=1
+		<if test="searchType == 'TITLE'">
+			AND board_title like '%${searchKeyword}%'
+		</if>
+		<if test="searchType == 'CONTENT'">
+			AND board_content like '%${searchKeyword}%'
+		</if>
+	</select>
+
+	<insert id="insertBoard">
+		insert into bnb_board(board_idx, board_title,
+		board_nickname,board_reion, board_content,fileName,fileName2)
+		values((select COALESCE(max(board_idx),0)+1 from bnb_board
+		a),#{board_title},#{board_nickname},#{board_reion},#{board_content},#{fileName},#{fileName2})
+	</insert>
+
+	<update id="updateBoard">
+		update bnb_board set board_title=#{board_title},
+		board_content=#{board_content}, board_regoin=#{board_region} where
+		board_idx=#{board_idx}
+	</update>
+
+	<delete id="deleteBoard">
+		delete from bnb_board where board_idx=#{board_idx}
+	</delete>
+	<select id="searchBoardList" parameterType="board"
+		resultType="board">
+		select * from bnb_board where board_title like '%${board_title}%' order by
+		board_idx desc;
+	</select>
+
+</mapper>
