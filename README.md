@@ -33,17 +33,24 @@
   * 숙소 별 조회수 제공
   * 제목, 작성자, 국가 정보 제공
   * 페이징 기능
-![localhost_8080_web_getBoardList do](https://user-images.githubusercontent.com/86212069/128319662-b75e6970-e2e2-40c6-af03-47c788c29a2c.png)
 
+![localhost_8080_web_getBoardList do fgsdfg(1)](https://user-images.githubusercontent.com/86212069/128324561-133fa307-2d2e-475b-93f3-03f8264a08c7.png)
+
+
+***
 
 2. 호스트가 되어 보세요
   * 호스트의 집 사진을 올릴 수 있는 다중 파일 업로드 기능
   * 파일 업로드 시 사진 미리보기 기능 제공
-![localhost_8080_web_insertBoard2 jsp (1)](https://user-images.githubusercontent.com/86212069/128320447-bb6a93c6-dddd-464c-b9f4-ce2c88f0d5d7.png)
 
+
+![localhost_8080_web_insertBoard2 jsp 2222(1)](https://user-images.githubusercontent.com/86212069/128324804-704e13cf-97cd-484d-9915-3fd512d9cf69.png)
+
+---
 
 3. 로그인, 로그아웃, 회원가입, 회원정보수정, 회원 탈퇴
-![화면 캡처 2021-08-05 173629](https://user-images.githubusercontent.com/86212069/128320475-251d768e-63d6-4133-961c-84afcf600e72.png)
+
+![화면 캡처 2021-08-05 173629](https://user-images.githubusercontent.com/86212069/128324988-9bac7d12-9600-4d4a-9ca5-8e9a9ee8cbbd.png)
 
 
 # 외부 리소스, 출처 및 참고 사이트
