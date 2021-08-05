@@ -33,10 +33,18 @@
   * 숙소 별 조회수 제공
   * 제목, 작성자, 국가 정보 제공
   * 페이징 기능
+![localhost_8080_web_getBoardList do](https://user-images.githubusercontent.com/86212069/128319662-b75e6970-e2e2-40c6-af03-47c788c29a2c.png)
+
+
 2. 호스트가 되어 보세요
   * 호스트의 집 사진을 올릴 수 있는 다중 파일 업로드 기능
   * 파일 업로드 시 사진 미리보기 기능 제공
+![localhost_8080_web_insertBoard2 jsp (1)](https://user-images.githubusercontent.com/86212069/128320447-bb6a93c6-dddd-464c-b9f4-ce2c88f0d5d7.png)
+
+
 3. 로그인, 로그아웃, 회원가입, 회원정보수정, 회원 탈퇴
+![화면 캡처 2021-08-05 173629](https://user-images.githubusercontent.com/86212069/128320475-251d768e-63d6-4133-961c-84afcf600e72.png)
+
 
 # 외부 리소스, 출처 및 참고 사이트
 1. 유투브 데어 프로그래밍 - HTML을 이용한 에어비앤비(airbnb) 만들기
