@@ -16,8 +16,7 @@
 # 프로젝트 환경설정
 ##### OS : Windows 10
 ##### Java v1.8.281.09
-##### Spring Framework v4.11.0
-##### pom.xml Spring 4.3.25 로 변경(2021-01 현 정부프레임워크 버전)
+##### Spring Framework 4.3.30
 ##### Tomcat v8.5
 ##### Maven
 ##### MsSQL 2019
